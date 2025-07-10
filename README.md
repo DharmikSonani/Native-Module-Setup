@@ -3,7 +3,7 @@
 ## Android Setup 
 
 ### 1. Create the Native Module
-#### **File:** [`android/app/src/main/java/com/<package-name>/MyModule.kt`]()
+#### **File:** [`android/app/src/main/java/com/<package-name>/MyModule.kt`](https://github.com/DharmikSonani/Native-Module-Setup/blob/main/android/app/src/main/java/com/%3Cpackage-name%3E/MyModule.kt)
 
 ```kotlin
 package com.<package-name>
@@ -22,7 +22,7 @@ class MyModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModu
 ```
 
 ### 2. Create the React Package
-#### **File:** [`android/app/src/main/java/com/<package-name>/MyPackage.kt`]()
+#### **File:** [`android/app/src/main/java/com/<package-name>/MyPackage.kt`](https://github.com/DharmikSonani/Native-Module-Setup/blob/main/android/app/src/main/java/com/%3Cpackage-name%3E/MyPackage.kt)
 
 ```kotlin
 package com.<package-name>
@@ -44,7 +44,7 @@ class MyPackage : ReactPackage {
 ```
 
 ### 3. Register the Package in `MainApplication.kt`
-#### **File:** [`android/app/src/main/java/com/<package-name>/MainApplication.kt`]()
+#### **File:** [`android/app/src/main/java/com/<package-name>/MainApplication.kt`](https://github.com/DharmikSonani/Native-Module-Setup/blob/main/android/app/src/main/java/com/%3Cpackage-name%3E/MainApplication.kt)
 ```kotlin
 package com.<package-name>
 
@@ -75,7 +75,7 @@ npm run android
 ### **Note** : Create all Required files from **xCode**.
 
 ### 1. Create MyModule.swift (Swift)
-#### **File:** [`ios/MyModule.swift`]()
+#### **File:** [`ios/MyModule.swift`](https://github.com/DharmikSonani/Native-Module-Setup/blob/main/ios/MyModule.swift)
 
 ```swift
 import Foundation
@@ -101,7 +101,7 @@ class MyModule: NSObject, RCTBridgeModule{
 ```
 
 ### 2. Create MyModule.m (Objective-C)
-#### **File:** [`ios/MyModule.m`]()
+#### **File:** [`ios/MyModule.m`](https://github.com/DharmikSonani/Native-Module-Setup/blob/main/ios/MyModule.m)
 
 ```objc
 #import <Foundation/Foundation.h>
@@ -114,7 +114,7 @@ RCT_EXTERN_METHOD(getName:(NSString *)name resolver:(RCTPromiseResolveBlock)reso
 ```
 
 ### 3. Create the Bridging Header
-#### **File:** [`ios/<YourAppName>-Bridging-Header.h`]()
+#### **File:** [`ios/<YourAppName>-Bridging-Header.h`](https://github.com/DharmikSonani/Native-Module-Setup/blob/main/ios/%3CYourAppName%3E-Bridging-Header.h)
 ```objc
 #import "React/RCTBridgeModule.h"
 #import "React/RCTEventEmitter.h"
@@ -131,12 +131,12 @@ npm run ios
 ```
 
 ## Usage - useNativeModule hook
-#### Code [`src/hooks/useNativeModule.js`]()
+#### Code [`src/hooks/useNativeModule.js`](https://github.com/DharmikSonani/Native-Module-Setup/blob/main/src/hooks/useNativeModule.js)
 
 ```javascript
 import { NativeModules } from 'react-native';
 
 const { MyModule } = NativeModules; // Replace MyModule with your native module
 
-MyModule?.getName('Hello').then(console.log) // Replace .getName('') with your Function
+MyModule?.getName('Hello')?.then(console.log).catch(console.log) // Replace .getName('') with your Function
 ```
